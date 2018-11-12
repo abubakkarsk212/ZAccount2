@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProgressDetails"
+    android:padding="8dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/topic28"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+
+        android:textColor="#9C27B0"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/availPage8"
+        android:layout_marginTop="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#e91e63"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/aboutDetailsold8"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/promoPage8"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#e91e63"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/promoDetails8"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/thingPage8"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#e91e63"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/thingDetails8"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/tcPage18"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#e91e63"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tcDetails8"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/validityPage8"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#e91e63"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/validityDetails8"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingLeft="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="#E65100"
+        />
+    <Button
+        android:id="@+id/availnow8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#26A69A"
+        android:textColor="#ffffff"
+        android:text="Avail Now"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"/>
+</LinearLayout>
+</ScrollView>

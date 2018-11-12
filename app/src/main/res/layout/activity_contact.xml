@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".Contact">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            tools:context="com.popo.as.appbook.ContactUs"
+            >
+            <ImageView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/contactus"
+                />
+
+
+
+            <LinearLayout
+                android:layout_below="@id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="15dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="#bdbdbd"
+                    >
+                </View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#ffffff">
+                    <TextView
+                        android:paddingTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Us"
+                        android:gravity="center_horizontal"
+                        android:textSize="35sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:paddingBottom="16dp"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:background="#bdbdbd"
+                        >
+                    </View>
+                    <TextView
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thanks for using our App. Fell free to contact us."
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:textSize="18sp"
+                        android:textColor="#000000"
+                        android:paddingLeft="5dp"
+                        />
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp"
+                        android:text="Just hit the text, it will open automatically"
+                        android:textSize="18sp"
+                        android:textColor="#f44336"
+                        android:paddingLeft="16dp"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingLeft="14dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:background="#ffffff"
+
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/whatsapp"
+                        />
+
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:onClick="whatsapp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Whatsapp"
+                        android:background="#ffffff"
+                        style="@style/headingContact"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingLeft="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:onClick="contmail"
+                    android:background="#ffffff">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/gmail"/>
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:text="Email"
+                        style="@style/headingContact"
+                        android:id="@+id/textView2" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"
+                    android:background="#bdbdbd"
+                    >
+                </View>
+                <LinearLayout
+                    android:paddingTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#ffffff"
+                    android:paddingBottom="5dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#f44336"
+                        android:textStyle="bold"
+                        android:text="NOTE:-"
+                        style="@style/teztContact" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:text="-You can contact any one of those lines. "
+                        style="@style/teztContact" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:text="-We will try to reply within 24HRS. "
+                        style="@style/teztContact" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:text="-Please do not call at that no,they are only meant for meassage. "
+                        style="@style/teztContact"
+                        android:background="#ffffff"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PoPo ltd"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/banner_container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        />
+</RelativeLayout>

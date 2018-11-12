@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Invite">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="290dp"
+        android:src="@drawable/invitenext"
+        android:id="@+id/imageView5"
+        android:background="#ffffff"
+        />
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share Via"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#e91e63"
+        android:background="#ffffff"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:layout_marginTop="8dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:gravity="center_horizontal"
+        >
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="40dp"
+            android:onClick="whatsapp"
+            android:src="@mipmap/whatsapp"
+            android:id="@+id/imageView7" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/gmail"
+            android:layout_marginRight="40dp"
+            android:onClick="gmail"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/messmi"
+            android:layout_marginRight="8dp"
+            android:onClick="text"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
