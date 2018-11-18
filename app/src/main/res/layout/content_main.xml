@@ -22,25 +22,29 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingTop="8dp"
-        android:paddingBottom="16dp"
         android:background="@drawable/layout_styleview"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+       >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Updates"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="4dp"
             android:layout_marginLeft="8dp"
             android:textColor="#000000"
             android:textAppearance="?android:textAppearanceMedium"
             />
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPagerUpdates"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
+        <ImageView
+            android:id="@+id/imagePager"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
             android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"/>
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/zaccloading"
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -478,25 +482,7 @@
                 android:text="DBS by digiBank"
                 android:textColor="#000000"/>
         </LinearLayout>
-
     </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
 
-        android:background="@drawable/layout_styleview"
-
-        >
-        <ImageView
-            android:id="@+id/imagePager"
-            android:layout_width="wrap_content"
-            android:layout_height="160dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:gravity="center_vertical"
-            />
-
-    </LinearLayout>
 </LinearLayout>
 </ScrollView>

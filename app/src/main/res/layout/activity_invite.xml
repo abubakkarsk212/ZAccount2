@@ -21,6 +21,18 @@
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Invite you friends and family to download app and help them to open zero balance saving account and use bank services"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:background="#ffffff"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        />
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="Share Via"
         android:textSize="22sp"
         android:textStyle="bold"

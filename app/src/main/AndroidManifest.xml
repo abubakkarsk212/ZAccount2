@@ -4,7 +4,6 @@
     package="zacc.popo.ltd.zaccount">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:name="android.support.multidex.MultiDexApplication"

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -25,6 +26,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity
     private DatabaseReference databaseReference,databaseReference1;
     boolean doubleBackToExitPressedOnce = false;
     ImageView singleView;
+
 //    Button offerZone;
     RecyclerView mRecyclerView,mRecyclerView1;
     RecyclerView.LayoutManager mLayoutManager,mLayoutManager1;
@@ -154,6 +158,7 @@ public class MainActivity extends AppCompatActivity
                     Glide.with(singleView.getContext())
                             .load(singleImgObj.getPicsUrl())
                             .into(singleView);
+
                 }
 
                 @Override
