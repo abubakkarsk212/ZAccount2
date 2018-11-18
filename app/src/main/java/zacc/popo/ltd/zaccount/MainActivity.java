@@ -107,42 +107,6 @@ public class MainActivity extends AppCompatActivity
         databaseReference1 = FirebaseDatabase.getInstance().getReference("OffersList").child("ButtonProp");
         singleView = findViewById(R.id.imagePager);
 
-//        offerZone.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//            Intent i =new Intent(MainActivity.this,OffersZone.class);
-//            startActivity(i);
-//            }
-//        });
-//        databaseReference1.addChildEventListener(new ChildEventListener() {
-//            @Override
-//            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//                OfferButtonColorObj offerButtonColorObj = dataSnapshot.getValue(OfferButtonColorObj.class);
-//                int color =Color.parseColor(offerButtonColorObj.getColor());
-//                offerZone.setBackgroundColor(color);
-//                offerZone.setText(offerButtonColorObj.getName());
-//            }
-//
-//            @Override
-//            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-//
-//            }
-//
-//            @Override
-//            public void onChildRemoved(DataSnapshot dataSnapshot) {
-//
-//            }
-//
-//            @Override
-//            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
         singleView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
