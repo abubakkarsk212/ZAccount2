@@ -1,53 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="380dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:padding="16dp"
    >
-    <ImageView
-        android:layout_width="380dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_insert_emoticon_black_24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:layout_gravity="center_horizontal"/>
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Register For Bank Service"
-    android:textColor="#000000"
-    android:layout_marginLeft="8dp"
-    />
-    <EditText
-        android:id="@+id/enterN"
-        android:layout_marginTop="16dp"
-        android:layout_width="300dp"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastAcctNoIL"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Your Account No"
-        android:layout_marginLeft="8dp"
-       />
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lastAIET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/border_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:inputType="phone"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <LinearLayout
-        android:layout_width="380dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         >
     <Button
-        android:id="@+id/yesB"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:text="Continue"
-        android:background="#00BCD4"
-        android:textColor="#ffffff"
-        />
-    <Button
-        android:id="@+id/noB"
+        android:id="@+id/cancelAlert"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:text="Cancel"
-        android:background="#F44336"
+        android:textColor="#ffffff"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/redmessage_oimage"
+        />
+    <Button
+        android:id="@+id/continueAlert"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Continue"
         android:textColor="#ffffff"/>
     </LinearLayout>
 </LinearLayout>

@@ -1,397 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="zacc.popo.ltd.zaccount">
+    package="zacc.popo.ltd.zaccount" >
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-        android:name="android.support.multidex.MultiDexApplication"
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/zaccounticon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@mipmap/ic_launcher" />
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorPrimary" />
-
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity android:name=".Bankpage_mod" >
+        </activity>
+        <activity android:name=".ChooseLanguage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="zacc.popo.ltd.zaccount.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BankListOpen"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="zacc.popo.ltd.zaccount.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PrepostActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:parentActivityName=".SelectBank" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="zacc.popo.ltd.zaccount.SelectBank" />
+        </activity>
+        <activity android:name=".IFSCFinder" />
+        <activity
+            android:name=".UssdPage"
+            android:parentActivityName=".SelectBank" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="zacc.popo.ltd.zaccount.SelectBank" />
+        </activity>
+        <activity
+            android:name=".SelectBank"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="zacc.popo.ltd.zaccount.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BankPage"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="zacc.popo.ltd.zaccount.MainActivity" />
+        </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
         <activity
-            android:name=".Airtel"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".Paytm"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".Pocket"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".Kotak"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".Fedbook"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".Rbl"
-            android:theme="@style/noactionbar"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:host="zaccountcontent.page.link" android:scheme="https"/>
-                <data android:host="zaccountcontent.page.link" android:scheme="http"/>
-            </intent-filter>
+            android:name=".Web_Page"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="zacc.popo.ltd.zaccount.MainActivity" />
         </activity>
-        <activity
-            android:name=".Dbs"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".Axis"
-            android:theme="@style/noactionbar" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:host="zaccountcontent.page.link" android:scheme="https"/>
-                <data android:host="zaccountcontent.page.link" android:scheme="http"/>
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".IDFC"
-            android:theme="@style/noactionbar" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+     notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
         <activity
             android:name=".Contact"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="Contact Us"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".About"
-            android:label="About"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Invite"
-            android:label="Invite"
-            android:parentActivityName=".MainActivity" />
+        <!--
+ Firebase generates an Instance ID, which FCM uses to generate a registration token and
+         Analytics uses for data collection. When an Instance ID is generated, the library will upload
+          the identifier and configuration data to Firebase. If you prefer to prevent Instance ID
+          autogeneration, disable auto initialization for FCM and Analytics
+        -->
         <activity
             android:name=".SplashScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/noactionbar">
+            android:theme="@style/noactionbar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <!--<action android:name="android.intent.action.VIEW"/>-->
-                <category android:name="android.intent.category.LAUNCHER" />
-                <!--<category android:name="android.intent.category.DEFAULT"/>-->
-                <!--<data android:host="zaccountcontent.page.link" android:scheme="https"/>-->
-                <!--<data android:host="zaccountcontent.page.link" android:scheme="http"/>-->
-            </intent-filter>
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="zaccount.page.link"
+                    android:scheme="https" />
+                <data
+                    android:host="zaccount.page.link"
+                    android:scheme="http" />
+            </intent-filter>
         </activity>
-        <activity
-            android:name=".SingleViewDetails"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".OffersZone"
-            android:label="Offers Zone"
-            android:screenOrientation="portrait" />
-        <activity android:name=".OfferDetails" />
-        <activity
-            android:name=".OfferNewDetails"
-            android:label="Offer Details"
-            android:parentActivityName=".OffersZone" />
-        <activity android:name=".ProgressDetails" />
-        <activity
-            android:name=".CustomerGrid"
-            android:label="Customer Care"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".BankServiceGrid"
-            android:label="Bank Services"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".AxisC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".IciciC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".AirtelBC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".FederalC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".HdfcC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".IndianC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".KotakC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".PaytmC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".PnbC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".RblC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".SbiC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".UnionC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".DbsC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".IdfcC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".YesBC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".AllahabadC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".AndhraC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".BankOfBaroda"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".BankOfIndia"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".CanaraBank"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".HsbcC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".IndianOverseasC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".InduslandC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".KarnatakaC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".StandardC"
-            android:theme="@style/noactionbar" />
-        <activity android:name=".SyndicateC" />
-        <activity
-            android:name=".UcoC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".VijayaC"
-            android:theme="@style/noactionbar" />
-        <activity
-            android:name=".SbiBankServices"
-            android:label="SBI"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".IciciBankService"
-            android:label="ICICI"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".RechargeActivitySbi"
-            android:label="Recharge"
-            android:parentActivityName=".SbiBankServices" />
-        <activity
-            android:name=".PrepaidSbi"
-            android:label="Prepaid Mobile"
-            android:parentActivityName=".RechargeActivitySbi" />
-        <activity
-            android:name=".DthSbi"
-            android:label="DTH"
-            android:parentActivityName=".RechargeActivitySbi" />
-        <activity
-            android:name=".UssdBankingSbi"
-            android:label="Ussd Banking"
-            android:parentActivityName=".SbiBankServices" />
-        <activity
-            android:name=".RechargeIcici"
-            android:label="Recharge"
-            android:parentActivityName=".IciciBankService" />
-        <activity
-            android:name=".PrepaidIciciR"
-            android:label="Prepaid Mobile"
-            android:parentActivityName=".RechargeIcici" />
-        <activity
-            android:name=".PostpaidIciciR"
-            android:label="Postpaid Mobile"
-            android:parentActivityName=".RechargeIcici" />
-        <activity
-            android:name=".BroadbandIciciR"
-            android:label="Broadband Recharge"
-            android:parentActivityName=".RechargeIcici" />
-        <activity
-            android:name=".DthIciciR"
-            android:label="DTH"
-            android:parentActivityName=".RechargeIcici" />
-        <activity
-            android:name=".PrimaryIcici"
-            android:label="Primary Account"
-            android:parentActivityName=".IciciBankService" />
-        <activity
-            android:name=".NonPrimaryIcici"
-            android:label="Non Primary Account"
-            android:parentActivityName=".IciciBankService" />
-        <activity
-            android:name=".CreditCardIcici"
-            android:label="Credit Card"
-            android:parentActivityName=".IciciBankService" />
-        <activity
-            android:name=".DematIcici"
-            android:label="Demat Account"
-            android:parentActivityName=".IciciBankService" />
-        <activity
-            android:name=".LoanIcici"
-            android:label="Loan Account"
-            android:parentActivityName=".IciciBankService" />
-        <activity
-            android:name=".UssdBankingIcici"
-            android:label="USSD Banking"
-            android:parentActivityName=".IciciBankService" />
-        <activity
-            android:name=".FederalBankService"
-            android:label="Federal Bank"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".RechargeFederal"
-            android:label="Recharge"
-            android:parentActivityName=".FederalBankService" />
-        <activity
-            android:name=".PrepaidFederal"
-            android:label="Prepaid Mobile"
-            android:parentActivityName=".RechargeFederal" />
-        <activity
-            android:name=".MetroFederal"
-            android:label="Metro Recharge"
-            android:parentActivityName=".RechargeFederal" />
-        <activity
-            android:name=".DthFederal"
-            android:label="DTH"
-            android:parentActivityName=".RechargeFederal" />
-        <activity
-            android:name=".UssdBankingFederal"
-            android:label="USSD Banking"
-            android:parentActivityName=".FederalBankService" />
-        <activity
-            android:name=".HdfcBankServices"
-            android:label="HDFC"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".HdfcUssd"
-            android:label="USSD Banking"
-            android:parentActivityName=".HdfcBankServices" />
-        <activity
-            android:name=".IndianBankService"
-            android:label="Indian Bank"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".UsssdBankingIndian"
-            android:label="Ussd Banking"
-            android:parentActivityName=".IndianBankService" />
-        <activity
-            android:name=".AxisBankServices"
-            android:label="Axis Bank"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".RechargeAxis"
-            android:label="Recharge"
-            android:parentActivityName=".AxisBankServices" />
-        <activity
-            android:name=".PrepaidAxis"
-            android:label="Prepaid Mobile"
-            android:parentActivityName=".RechargeAxis" />
-        <activity
-            android:name=".BroadbandAxis"
-            android:label="Data Card"
-            android:parentActivityName=".RechargeAxis" />
-        <activity
-            android:name=".DthAxis"
-            android:label="DTH"
-            android:parentActivityName=".RechargeAxis" />
-        <activity
-            android:name=".UssdAxis"
-            android:label="USSD Banking"
-            android:parentActivityName=".AxisBankServices" />
-        <activity
-            android:name=".RblBankingServices"
-            android:label="RBL Bank"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".UssdRbl"
-            android:label="USSD Banking"
-            android:parentActivityName=".RblBankingServices" />
-        <activity
-            android:name=".UnionBankService"
-            android:label="Union Bank Of India"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".UssdUnion"
-            android:label="USSD Banking"
-            android:parentActivityName=".UnionBankService" />
-        <activity
-            android:name=".IdfcBankingService"
-            android:label="IDFC"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".UssdIdfc"
-            android:label="USSD Banking"
-            android:parentActivityName=".IdfcBankingService" />
-        <activity
-            android:name=".KotakBankService"
-            android:label="Kotak Mahindra Bank"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".RechargeKotak"
-            android:label="Recharge"
-            android:parentActivityName=".KotakBankService" />
-        <activity
-            android:name=".PrepaidKotak"
-            android:label="Prepaid Mobile"
-            android:parentActivityName=".RechargeKotak" />
-        <activity
-            android:name=".DthKotak"
-            android:label="DTH"
-            android:parentActivityName=".RechargeKotak" />
-        <activity
-            android:name=".BillKotak"
-            android:label="Pay Bills"
-            android:parentActivityName=".RechargeKotak" />
-        <activity
-            android:name=".UssdKotak"
-            android:label="USSD Banking"
-            android:parentActivityName=".KotakBankService" />
-        <activity
-            android:name=".PnbBankServices"
-            android:label="PNB"
-            android:parentActivityName=".BankServiceGrid" />
-        <activity
-            android:name=".UssdPnb"
-            android:label="USSD Banking"
-            android:parentActivityName=".PnbBankServices" />
-        <activity android:name=".PrivacyPoliciesZ"
-            android:label="Privacy Policy"
-            android:parentActivityName=".MainActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5042333644057598~2595820744" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/zaccountfornotification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/white" />
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+
+        <service android:name=".NotificationService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

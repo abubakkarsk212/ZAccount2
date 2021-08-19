@@ -21,7 +21,7 @@
                 android:id="@+id/contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/contactus"
                 />
 
@@ -97,12 +97,12 @@
                     android:layout_height="80dp"
                     android:orientation="horizontal"
                     android:background="#ffffff"
-
+                    android:gravity="center_vertical"
                     >
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@mipmap/whatsapp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/whatsapp"
                         />
 
 
@@ -123,12 +123,13 @@
                     android:layout_height="80dp"
                     android:orientation="horizontal"
                     android:onClick="contmail"
-                    android:background="#ffffff">
+                    android:background="#ffffff"
+                    android:gravity="center_vertical">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:src="@mipmap/gmail"/>
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/gmail"/>
 
                     <TextView
                         android:layout_marginLeft="5dp"
@@ -193,11 +194,14 @@
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
-    <LinearLayout
-        android:id="@+id/banner_container1"
-        android:layout_width="match_parent"
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewContact"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        />
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-5042333644057598/2689289708">
+    </com.google.android.gms.ads.AdView>
 </RelativeLayout>

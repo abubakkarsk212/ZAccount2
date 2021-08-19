@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -7,30 +7,37 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
     android:gravity="center_horizontal"
-    android:paddingTop="96dp"
-    android:background="#0080ff"
+    android:paddingTop="150dp"
+    android:background="@color/white"
     >
 <ImageView
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:src="@drawable/zaccountnewdesign"
+    android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+
+<TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:src="@drawable/zaccountsplash"/>
+    android:text="Made In"
+    android:fontFamily="@font/opensans_bold"
+    android:textColor="@color/black"
+    android:layout_marginRight="8dp"
+    android:textAppearance="?android:textAppearanceMedium"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_indian"/>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="A Simple Guidelines"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#ffffff"
-        android:layout_marginBottom="8dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="To open Zero Balance Saving Account"
-        android:gravity="center_horizontal"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#ffffff"/>
 
-</LinearLayout>
+</RelativeLayout>

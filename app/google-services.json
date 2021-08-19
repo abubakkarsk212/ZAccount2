@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1014432355207-r7aimd9kivsumvh6ks6ah690lqerjo2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "zacc.popo.ltd.zaccount",
+            "certificate_hash": "b1775cefcc523ef69b645cf9dc439e1fd35b5fca"
+          }
+        },
+        {
           "client_id": "1014432355207-b6m6j8q30631bsh3j7bl7l3roiqkdbiv.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -33,20 +41,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "1014432355207-f6rva902s9v9sogiajofp3p8jbra10q0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       },
       "admob_app_id": "ca-app-pub-1775786915215854~6219637651"
@@ -78,20 +79,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "1014432355207-f6rva902s9v9sogiajofp3p8jbra10q0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

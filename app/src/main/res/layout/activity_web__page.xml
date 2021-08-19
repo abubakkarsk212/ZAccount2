@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rlweb"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Web_Page">
+    <RelativeLayout
+        android:id="@+id/lltext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+        <TextView
+            android:id="@+id/webtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facing Problem? Open in mobile browser"
+            android:textColor="@color/violet"
+            android:textStyle="bold"
+            android:layout_marginRight="8dp"/>
+        <ImageView
+            android:id="@+id/imgRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_refresh_black_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+
+
+<WebView
+    android:id="@+id/lrweb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/lltext"
+    />
+    <ProgressBar
+        android:id="@+id/landProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>
